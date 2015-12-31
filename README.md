@@ -1,7 +1,20 @@
 # juno-cheerio
 Simple Express template engine for unobtrusive templating with cheerio.
 
-# Example of use
+## Idea
+Using tipical template engines involves learning the template language and process html base in order to accomplish template engine requirements.
+
+Why not an unobtrusive way to work with html base?
+
+In frontend side, jQuery helps to work in an unobtrusive way. What if we could apply this idea in backend side?
+
+Cheerio provides jQuery functionalities for Node.
+
+This is an example of how to work with cheerio to provide unobtrusive templating.
+
+With juno-cheerio, you can use your jQuery skills to template Express in an unobtrusive way.
+
+## Example of use
 https://github.com/akobashikawa/express-unobtrusive-template-engine/tree/juno
 
 app.js
@@ -35,3 +48,15 @@ app.use(function(err, req, res, next) {
 - ```public/*.html``` are templates. Templates are simple html. No template language is required. Note than middleware for static files in public appear *after* routes to allow public contains templates.
 
 - ```routes/index.js``` implements actions for defined routes, as usual in Express.
+
+```javascript
+router.get('/', function(req, res, next) {
+    res.render('index', {
+        replaces: function($) {
+            $('title').text('Home');
+            $('h1.title').text('Home');
+            $('.content').text('¡Hola Mundo!');
+        }
+    });
+});
+```

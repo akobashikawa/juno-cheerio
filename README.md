@@ -1,4 +1,4 @@
-# Juno
+# juno-cheerio
 Simple Express template engine for unobtrusive templating with cheerio.
 
 # Example of use
@@ -6,7 +6,7 @@ https://github.com/akobashikawa/express-unobtrusive-template-engine/tree/juno
 
 app.js
 ```javascript
-var juno = require('juno');
+var juno = require('juno-cheerio');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'public'));

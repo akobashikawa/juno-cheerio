@@ -2,7 +2,7 @@
     "name": "juno-cheerio",
     "description": "Simple Express template engine for unobtrusive templating with cheerio",
     "author": "Rulo Kobashikawa <akobashikawa@gmail.com> (http://akcdev.blogspot.com)",
-    "version": "1.0.2",
+    "version": "2.0.0",
     "main": "index.js",
     "license": "MIT",
     "repository": {

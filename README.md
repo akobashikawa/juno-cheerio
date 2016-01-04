@@ -60,3 +60,19 @@ router.get('/', function(req, res, next) {
     });
 });
 ```
+
+## Using remote url
+You can use option **url** to indicate remote url as source of html template.
+
+```javascript
+router.get('/', function(req, res, next) {
+    url: 'http://somedomain.com/sometemplate.html',
+    res.render('index', {
+        replaces: function($) {
+            $('title').text('Home');
+            $('h1.title').text('Home');
+            $('.content').text('¡Hola Mundo!');
+        }
+    });
+});
+```
